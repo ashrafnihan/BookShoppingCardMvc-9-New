@@ -10,12 +10,16 @@ namespace BookShoppingCardMvcUI.Models
         [Required]
         [MaxLength(40)]
         public string? BookName { get; set; }
-        public double price { get; set; }
+        [Required]
+        public double  Price { get; set; }
         public string? Image { get; set; }
+   
+ 
         [Required]
         public int GenreID { get; set; }
-        public Genre Genre;
-        
+        public Genre? Genre { get; set; }
+        public List<OrderDetail>? OrderDetail { get; set; }
 
+        public List<CartDetail>? CartDetail { get; set; }
     }
 }
